@@ -13,8 +13,8 @@ class AnimalController extends Controller
     public function index()
     {
         //
-        $animal = Animal::all();
-        return view('pages.index',);
+        $animals = Animal::all();
+        return view('pages.index',compact('animals'));
     }
 
     /**
