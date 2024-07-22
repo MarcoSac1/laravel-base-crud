@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AnimalController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,4 +18,5 @@ Route::get('/', function () {
     return view('app');
 });
 
-Route::get('/Animal',);
+Route::get('/animal', [AnimalController::class,'index'])->name('pages.index');
+

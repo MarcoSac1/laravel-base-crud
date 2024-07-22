@@ -13,7 +13,13 @@ return new class extends Migration
     {
         Schema::create('animals', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('nome',30);
+            $table->string('specie',30);
+            $table->string('habitat',30);
+            $table->integer('longevità',);
+            $table->boolean('rischio_estinzione');
+            $table->string('alimentazione',20);
+            $table->string('regione',50);
         });
     }
 
