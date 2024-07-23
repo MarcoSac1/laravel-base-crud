@@ -16,27 +16,27 @@
 
                 <div class="mb-3">
                     <label for="AnimalId">Animal id</label>
-                    <input class="form-control form-control-sm mb-2" type="number" placeholder="Animal id" aria-label="Animal id " id="AnimalId" name="AnimalId">
+                    <input class="form-control form-control-sm mb-2" type="number" placeholder="Animal id" aria-label="id " id="Id" name="Id">
                 </div>
 
                 <div class="mb-3">
                     <label for="AnimalSpecie">Animal Specie</label>
-                    <input class="form-control form-control-sm mb-2" type="text" placeholder="Animal specie" aria-label="Animal Specie" id="AnimalSpecie" name="AnimalSpecie">
+                    <input class="form-control form-control-sm mb-2" type="text" placeholder="Animal specie" aria-label="Animal Specie" id="Specie" name="Specie">
                 </div>
 
                 <div class="mb-3">
                     <label for="AnimalHabitat">Animal Habitat</label>
-                    <input class="form-control form-control-sm mb-2" type="text" placeholder="Animal habitat" aria-label="Animal Habitat" id="AnimalHabitat" name="AnimalHabitat">
+                    <input class="form-control form-control-sm mb-2" type="text" placeholder="Animal habitat" aria-label="Animal Habitat" id="Habitat" name="Habitat">
                 </div>
 
                 <div class="mb-3">
                     <label for="AnimalLongevità">Animal Longevità</label>
-                    <input class="form-control form-control-sm mb-2" type="text" placeholder="Animal longevità" aria-label="Animal Longevità" id="AnimalLongevità" name="AnimalLongevità">
+                    <input class="form-control form-control-sm mb-2" type="text" placeholder="Animal longevità" aria-label="Animal Longevità" id="Longevità" name="Longevità">
                 </div>
 
                 <div class="mb-3">
                     <label for="Animal rischio_estinzione">Rischio di Estinzione</label>
-                    <input class="form-control form-control-sm mb-2" type="number" placeholder="Animal rischio estinzione" aria-label="Animal rischio_estinzione" id="rischio_estinzione" name="Animal rischio_estinzione">
+                    <input class="form-control form-control-sm mb-2" type="number" placeholder="Animal rischio estinzione" aria-label="rischio_estinzione" id="rischio_estinzione" name="rischio_estinzione">
                 </div>
 
                 <div class="mb-3">
