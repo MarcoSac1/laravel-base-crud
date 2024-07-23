@@ -1,5 +1,5 @@
 @extends('app')
-@section('main-content')
+@section('main-section')
     <div class="container">
         <div class="row">
             <section class=" text-center px-3">
@@ -9,7 +9,7 @@
                         <h5 class="card-title">Specie: {{ $animal->specie }}</h5>
                         <p class="card-text">Habitat: {{ $animal->habitat }} <br> Longevità: {{ $animal->longevità }} <br>
                         <p>Regione: {{ $animal->regione }}</p></p>
-                        <a href="{{ route('pages.show', $animal) }}" class="btn btn-primary">Animal detail</a>
+                        {{-- <a href="{{ route('pages.show', $animal) }}" class="btn btn-primary">Animal detail</a> --}}
                     </div>
                 </div>
             </section>

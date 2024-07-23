@@ -18,5 +18,5 @@ Route::get('/', function () {
     return view('app');
 });
 
-Route::get('/animal', [AnimalController::class,'index'])->name('pages.index');
-Route::get('/animal/{animals}', [AnimalController::class,'show'])->name('pages.show');
+Route::get('/animals', [AnimalController::class,'index'])->name('pages.index');
+Route::get('/animals/{animal}', [AnimalController::class,'show'])->name('pages.show');
