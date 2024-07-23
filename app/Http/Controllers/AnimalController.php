@@ -39,6 +39,7 @@ class AnimalController extends Controller
     public function show(Animal $animal)
     {
         //
+        return view('pages.index',compact('animals'));
     }
 
     /**

@@ -1,22 +1,19 @@
 @extends('app')
 @section('main-section')
-
-<h1>Animal Reserve</h1>
 <div>
+    <h1>Animal Reserve</h1>
     @foreach ($animals as $animal)
-        <ul>
-            <li>
-                <h1>
-                {{ $animal->nome }}
-                </h1>
-                <p>Specie: {{ $animal->specie }}</p>
-                <p>Habitat: {{ $animal->habitat }}</p>
-                <p>Longevità: {{ $animal->longevità }}</p>
-                <p>Regione: {{ $animal->regione }}</p>
-                <br>
-            </li>
-
-        </ul>
+    <section class=" text-center px-3">
+            <div class="card col-4 mb-3 d-flex">
+                <h1 class="card-header">{{ $animal->nome }}</h1>
+                <div class="card-body">
+                    <h5 class="card-title">Specie: {{ $animal->specie }}</h5>
+                    <p class="card-text">Habitat: {{ $animal->habitat }} <br> Longevità: {{ $animal->longevità }} <br>
+                    <p>Regione: {{ $animal->regione }}</p></p>
+                    <a href="{{ route('pages.show', $animal) }}" class="btn btn-primary">Animal detail</a>
+                </div>
+            </div>
+        </section>
     @endforeach
 </div>
 @endsection
