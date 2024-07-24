@@ -75,8 +75,6 @@ class AnimalController extends Controller
     {
         //
         $data = $request->all();
-
-        $animal = new Animal($data);
         $animal->id = $data['id'];
         $animal->nome = $data['name'];
         $animal->specie = $data['specie'];
