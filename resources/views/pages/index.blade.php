@@ -11,6 +11,8 @@
                     <p class="card-text">Habitat: {{ $animal->habitat }} <br> Longevità: {{ $animal->longevità }} <br>
                     <p>Regione: {{ $animal->regione }}</p></p>
                     <a href="{{ route('pages.show', $animal) }}" class="btn btn-primary">Animal detail</a>
+                    <a href="{{ route('pages.edit', $animal) }}" class="btn btn-success">Edit</a>
+
                 </div>
             </div>
         </section>
