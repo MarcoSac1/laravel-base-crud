@@ -12,7 +12,11 @@
                     <p>Regione: {{ $animal->regione }}</p></p>
                     <a href="{{ route('pages.show', $animal) }}" class="btn btn-primary">Animal detail</a>
                     <a href="{{ route('pages.edit', $animal) }}" class="btn btn-success">Edit</a>
-
+                    <form action="{{ route('pages.destroy', $animal) }}" method="POST" class="d-inline-block animal-destroy">
+                        @method('DELETE')
+                        @csrf
+                    <button type="submit" class=" btn btn-warning">Delete</button>
+                    </form>
                 </div>
             </div>
         </section>
