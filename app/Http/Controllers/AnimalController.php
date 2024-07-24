@@ -33,7 +33,18 @@ class AnimalController extends Controller
     {
         //
         $data = $request->all();
-        dd($request->all());
+
+        $newAnimal = new Animal($data);
+        $newAnimal->id = $data['id'];
+        $newAnimal->nome = $data['name'];
+        $newAnimal->specie = $data['specie'];
+        $newAnimal->habitat = $data['habitat'];
+        $newAnimal->longevità = $data['longevità'];
+        $newAnimal->rischio_estinzione = $data['rischio_estinzione'];
+        $newAnimal->alimentazione = $data['alimentazione'];
+        $newAnimal->regione = $data['regione'];
+
+        dd($newAnimal);
     }
 
     /**

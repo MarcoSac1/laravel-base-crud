@@ -16,22 +16,22 @@
 
                 <div class="mb-3">
                     <label for="AnimalId">Animal id</label>
-                    <input class="form-control form-control-sm mb-2" type="number" placeholder="Animal id" aria-label="id " id="Id" name="Id">
+                    <input class="form-control form-control-sm mb-2" type="number" placeholder="Animal id" aria-label="id " id="id" name="id">
                 </div>
 
                 <div class="mb-3">
                     <label for="AnimalSpecie">Animal Specie</label>
-                    <input class="form-control form-control-sm mb-2" type="text" placeholder="Animal specie" aria-label="Animal Specie" id="Specie" name="Specie">
+                    <input class="form-control form-control-sm mb-2" type="text" placeholder="Animal specie" aria-label="Animal Specie" id="specie" name="specie">
                 </div>
 
                 <div class="mb-3">
                     <label for="AnimalHabitat">Animal Habitat</label>
-                    <input class="form-control form-control-sm mb-2" type="text" placeholder="Animal habitat" aria-label="Animal Habitat" id="Habitat" name="Habitat">
+                    <input class="form-control form-control-sm mb-2" type="text" placeholder="Animal habitat" aria-label="Animal Habitat" id="habitat" name="habitat">
                 </div>
 
                 <div class="mb-3">
                     <label for="AnimalLongevità">Animal Longevità</label>
-                    <input class="form-control form-control-sm mb-2" type="text" placeholder="Animal longevità" aria-label="Animal Longevità" id="Longevità" name="Longevità">
+                    <input class="form-control form-control-sm mb-2" type="text" placeholder="Animal longevità" aria-label="Animal Longevità" id="longevità" name="longevità">
                 </div>
 
                 <div class="mb-3">

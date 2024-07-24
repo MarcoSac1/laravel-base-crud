@@ -9,4 +9,5 @@ class Animal extends Model
 {
     use HasFactory;
     public $timestamps=false;
+    protected $fillable = ['id', 'nome','specie', 'habitat', 'longevità', 'rischio_estinzione', 'alimentazione', 'regione'];
 }
