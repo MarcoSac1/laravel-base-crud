@@ -44,7 +44,9 @@ class AnimalController extends Controller
         $newAnimal->alimentazione = $data['alimentazione'];
         $newAnimal->regione = $data['regione'];
 
-        dd($newAnimal);
+        $newAnimal->save();
+
+        return redirect()->route('pages.show',$newAnimal);
     }
 
     /**
