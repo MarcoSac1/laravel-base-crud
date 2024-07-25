@@ -33,21 +33,21 @@ class AnimalController extends Controller
     {
         //
         $data = $request->validate([
-            'id'=> 'required|unique:animal|integer|max:255|min:1',
-            'nome'=> 'required|unique:animal|max:255|min:3',
-            'specie'=> 'required|unique:animal|max:255|min:3',
-            'habitat'=> 'required|unique:animal|max:255|min:3',
+            'id'=> 'required|unique:animals|integer|max:255|min:1',
+            'nome'=> 'required|unique:animals|max:255|min:3',
+            'specie'=> 'required|unique:animals|max:255|min:3',
+            'habitat'=> 'required|unique:animals|max:255|min:3',
             'longevità'=> 'required|integer|min:1|max: 750',
-            'rischio_estinzione'=> 'required|integer|min:0|max: 1',
-            'alimentazione'=> 'required|unique:animal|max:255|min:3',
-            'regione'=> 'required|unique:animal|max:255|min:3',
+            'rischio_estinzione'=> 'required|boolean',
+            'alimentazione'=> 'required|unique:animals|max:255|min:3',
+            'regione'=> 'required',
         ]);
 
 
 
         $newAnimal = new Animal($data);
         $newAnimal->id = $data['id'];
-        $newAnimal->nome = $data['name'];
+        $newAnimal->nome = $data['nome'];
         $newAnimal->specie = $data['specie'];
         $newAnimal->habitat = $data['habitat'];
         $newAnimal->longevità = $data['longevità'];
