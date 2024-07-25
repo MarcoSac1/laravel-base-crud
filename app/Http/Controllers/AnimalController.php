@@ -7,6 +7,20 @@ use Illuminate\Http\Request;
 
 class AnimalController extends Controller
 {
+    private $validationRules = [
+        'id'=> 'required|unique:animals|integer|max:255|min:1',
+        'nome'=> 'required|unique:animals|max:255|min:3',
+        'specie'=> 'required|unique:animals|max:255|min:3',
+        'habitat'=> 'required|unique:animals|max:255|min:3',
+        'longevità'=> 'required|integer|min:1|max: 750',
+        'rischio_estinzione'=> 'required|boolean',
+        'alimentazione'=> 'required|unique:animals|max:255|min:3',
+        'regione'=> 'required',
+    ];
+
+    private $validationMessages =  [
+        'rischio_estinzione' =>'Inserisci 1 se l!animale è a rischio estinzione, inserisci 0 se non lo è'
+    ];
     /**
      * Display a listing of the resource.
      */
@@ -32,18 +46,7 @@ class AnimalController extends Controller
     public function store(Request $request)
     {
         //
-        $data = $request->validate([
-            'id'=> 'required|unique:animals|integer|max:255|min:1',
-            'nome'=> 'required|unique:animals|max:255|min:3',
-            'specie'=> 'required|unique:animals|max:255|min:3',
-            'habitat'=> 'required|unique:animals|max:255|min:3',
-            'longevità'=> 'required|integer|min:1|max: 750',
-            'rischio_estinzione'=> 'required|boolean',
-            'alimentazione'=> 'required|unique:animals|max:255|min:3',
-            'regione'=> 'required',
-        ]);
-
-
+        $data = $request->validate($this->validationRules,$this->validationMessages);
 
         $newAnimal = new Animal($data);
         $newAnimal->id = $data['id'];
