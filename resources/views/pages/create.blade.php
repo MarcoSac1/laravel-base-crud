@@ -6,6 +6,17 @@
                 create new Animal
             </h1>
         </div>
+        @if ($errors-> any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ( $errors->all() as  $error)
+                    <li>
+                        {{ $error }}
+                    </li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
         <div class="col-6 ">
             <form action="{{ route ('pages.store') }}" method="POST">
                 @csrf

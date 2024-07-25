@@ -74,7 +74,10 @@ class AnimalController extends Controller
     public function update(Request $request, Animal $animal)
     {
         //
-        $data = $request->all();
+        $data = $request->validate([
+            'nome'=> 'required|unique:animal|max:255|min:3',
+        ]);
+
         $animal->id = $data['id'];
         $animal->nome = $data['name'];
         $animal->specie = $data['specie'];
