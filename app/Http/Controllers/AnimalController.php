@@ -32,7 +32,18 @@ class AnimalController extends Controller
     public function store(Request $request)
     {
         //
-        $data = $request->all();
+        $data = $request->validate([
+            'id'=> 'required|unique:animal|integer|max:255|min:1',
+            'nome'=> 'required|unique:animal|max:255|min:3',
+            'specie'=> 'required|unique:animal|max:255|min:3',
+            'habitat'=> 'required|unique:animal|max:255|min:3',
+            'longevità'=> 'required|integer|min:1|max: 750',
+            'rischio_estinzione'=> 'required|integer|min:0|max: 1',
+            'alimentazione'=> 'required|unique:animal|max:255|min:3',
+            'regione'=> 'required|unique:animal|max:255|min:3',
+        ]);
+
+
 
         $newAnimal = new Animal($data);
         $newAnimal->id = $data['id'];
@@ -74,25 +85,8 @@ class AnimalController extends Controller
     public function update(Request $request, Animal $animal)
     {
         //
-        $data = $request->validate([
-            'id'=> 'required|unique:animal|integer|max:255|min:1',
 
-            'nome'=> 'required|unique:animal|max:255|min:3',
-            'specie'=> 'required|unique:animal|max:255|min:3',
-            'habitat'=> 'required|unique:animal|max:255|min:3',
-            'longevità'=> 'required|integer|min:1|max: 750',
-            'rischio_estinzione'=> 'required|integer|min:0|max: 1',
-            'alimentazione'=> 'required|unique:animal|max:255|min:3',
-            'regione'=> 'required|unique:animal|max:255|min:3',
-
-
-
-
-
-        ]);
-
-
-
+        $data = $request->all();
         $animal->id = $data['id'];
         $animal->nome = $data['name'];
         $animal->specie = $data['specie'];
