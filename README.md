@@ -64,3 +64,33 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## laravel-base-crud
+## day1
+Oggi create un nuovo progetto Laravel 10 per gestire una riserva di animali.
+Milestone 1
+Tramite gli appositi comandi artisan create un model con relativa migration e un resource controller. 
+Milestone 2
+Iniziate a definire le prime operazioni CRUD con le relative view: - index() - show() dei vari animali presenti in riserva.
+
+Bonus:
+Creare il seeder per la tabella animals utilizzando un csv generato magicamente da chatgpt!
+## day2
+Oggi continuiamo nella stessa repo di ieri.
+Definiamo i metodi Create e Store con le relative view dei vari animali presenti in riserva.
+
+Bonus:
+Creare una semplice modale di conferma in fase di creazione del nuovo record
+## day3
+Oggi continuiamo nella stessa repo di ieri.
+Definiamo i metodi edit(), update()  e delete() con le relative view dei vari animali presenti in riserva.
+
+Bonus:
+Creare una semplice modale di conferma in fase di creazione, modifica e soprattutto in fase di cancellazione
+## day4
+Oggi continuiamo nella stessa repo dei giorni scorsi.
+Definiamo la validazione di tutti i metodi con input e le relative view (con i metodi old e gli errori da visualizzare) per i vari animali presenti in riserva.
+
+Bonus:
+Aggiungiamo la funzionalita' di softdelete
+Aggiungiamo le rotte e le view necessarie a gestire un cestino
